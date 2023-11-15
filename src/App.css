@@ -5,7 +5,8 @@
   justify-content: center;
   min-height: 100vh;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color:#FFFFFF;
+;
 }
 
 .table-header,
@@ -19,9 +20,9 @@
 .column {
   flex: 1;
   border: 1px solid #ddd;
-  padding: 10px;
+  padding-left: 10px;
   cursor: pointer;
-  text-align: center;
+  text-align: left;
 }
 .nestedcolumn {
   flex: 2;
@@ -35,26 +36,41 @@
 }
 
 .column:hover {
-  background-color: #aaaaaa;
+  filter: brightness(90%);
 }
-
 .machine-name {
-  background-color: #9fd8ff;
-  flex: 1; /* Takes 1/3rd of the table */
+  background-color: #3750d4;
+  flex: 1;
 }
 
 .events {
-  background-color: #ffe591;
-  flex: 2; /* Takes 2/3rd of the table */
+  background-color: #0E86D4;
+  flex: 2;
 }
 
 .parameters {
-  background-color: #a5e19e;
-  flex: 1; /* Takes 1/3rd of the table */
+  background-color: #68BBE3;
+  flex: 1;
 }
 
 @media (max-width: 600px) {
   .column {
     font-size: 12px;
   }
+}
+.machine-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 60vh;
+  max-height: 60vh;
+  width: 90%;
+  padding: 5px;
+  border: 2px solid #F5DA59;
+  background-color: #C3E0E5;
+}
+.machine-container::-webkit-scrollbar {
+  display: none;
 }
