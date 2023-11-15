@@ -2,23 +2,22 @@ import React, { useState } from 'react';
 import MachineEvent from './MachineEvent';
 
 const Machine = ({ machine }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   return (
-    <div className="table-row">
+    <div className={`table-row ${open ? 'open' : ''}`}>
       <div className="column machine-name" onClick={() => setOpen(!open)}>
-        {machine.name} {open ? '▼' : '▶'}
+        {machine.name}
       </div>
       {open && (
-        <div className="column events">
-          {machine.events.map((machineEvent) => (
-            <MachineEvent key={machineEvent.id} machineEvent={machineEvent} />
-          ))}
-        </div>
+        <>
+          <div className="nestedcolumn">
+            {machine.events.map((machineEvent) => (
+              <MachineEvent key={machineEvent.id} machineEvent={machineEvent} />
+            ))}
+          </div>
+        </>
       )}
-      <div className="column parameters">
-        {/* Empty div to align with the table layout */}
-      </div>
     </div>
   );
 };

@@ -5,12 +5,12 @@ const MachineEvent = ({ machineEvent }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div>
-      <h3 onClick={() => setOpen(!open)} style={{ cursor: 'pointer' }}>
-        {machineEvent.name} {open ? '▼' : '▶'}
-      </h3>
+    <div className="table-row">
+      <div className="column events" onClick={() => setOpen(!open)}>
+        {machineEvent.name}
+      </div>
       {open && (
-        <div>
+        <div className='nestednestedcolumn'>
           {machineEvent.parameters.map((param) => (
             <Parameter key={param.id} parameter={param} />
           ))}

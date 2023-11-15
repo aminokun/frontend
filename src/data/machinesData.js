@@ -5,13 +5,20 @@ const machinesData = [
     events: [
       {
         id: 101,
-        name: 'Event 1',
+        name: 'Event 123',
         parameters: [
-          { id: 1001, name: 'Param 1' },
-          { id: 1002, name: 'Param 2' },
+          { id: 1001, name: 'Param 123' },
+          { id: 1002, name: 'Param 223' },
         ],
       },
-      // More events for Machine 1
+      {
+        id: 101,
+        name: 'Event 124',
+        parameters: [
+          { id: 1001, name: 'Param 124' },
+          { id: 1002, name: 'Param 224' },
+        ],
+      },
     ],
   },
   {

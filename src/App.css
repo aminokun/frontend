@@ -13,6 +13,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  padding: 1px;
 }
 
 .column {
@@ -22,21 +23,34 @@
   cursor: pointer;
   text-align: center;
 }
+.nestedcolumn {
+  flex: 2;
+  cursor: pointer;
+  text-align: center;
+}
+.nestednestedcolumn {
+  flex: 3;
+  cursor: pointer;
+  text-align: center;
+}
 
 .column:hover {
-  background-color: #f5f5f5;
+  background-color: #aaaaaa;
 }
 
 .machine-name {
   background-color: #9fd8ff;
+  flex: 1; /* Takes 1/3rd of the table */
 }
 
 .events {
   background-color: #ffe591;
+  flex: 2; /* Takes 2/3rd of the table */
 }
 
 .parameters {
   background-color: #a5e19e;
+  flex: 1; /* Takes 1/3rd of the table */
 }
 
 @media (max-width: 600px) {
